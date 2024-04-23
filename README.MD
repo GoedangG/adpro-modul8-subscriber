@@ -10,3 +10,18 @@
     - `first guest`:merujuk pada username untuk autentikasi RabbitMQ.
     - `second guests`: merujuk pada password untuk autentikasi RabbitMQ.
     - `localhost:5672`:adalah alamat dan port dari server RabbitMQ yang akan dihubungi. localhost artinya server RabbitMQ berjalan pada komputer lokal, dan 5672 adalah port default yang digunakan RabbitMQ untuk menerima koneksi.
+
+##### Running RabitMQ
+<img src = "static/running.png">
+
+##### Processing Event
+Spike terjadi ketika kita melakukan `cargo run` pada `publisher`, hal ini dikarenakan `publisher` mengirimkan data ke message broker dan `subscriber` menerima data tersebut.
+<img src = "static/processing event.png">
+
+##### Simulation Slow Subscribers
+Saya melakukan `cargo run` berkali-kali sehingga terjadi spike
+<img src = "static/slow.png">
+
+##### Monitoring
+Saya melakukan `cargo run` dengan adanya jeda kali ini, sehingga spike dapat berkurang dengan cepat
+<img src = "static/quicker.png">
